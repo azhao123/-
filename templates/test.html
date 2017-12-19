@@ -1,0 +1,21 @@
+
+
+
+<html>
+{% load staticfiles %}
+<head>
+    <script type="text/javascript" src="{% static 'ckeditor/ckeditor/ckeditor.js' %}"></script>
+    <title></title>
+</head>
+<body>
+{% for tt in t %}
+{{ tt.content | safe}}
+    {{ tt.content2 | safe}}
+{% endfor %}
+
+<td>
+                        <textarea id="opinion" name="opinion" rows="10" cols="38">${item.opinion}</textarea>
+                        <script type="text/javascript">CKEDITOR.replace('opinion')</script>
+                    </td>
+</body>
+</html>
